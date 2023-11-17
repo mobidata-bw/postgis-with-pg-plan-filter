@@ -9,10 +9,8 @@ RUN apk add --no-cache \
 	postgresql-dev \
 	unzip
 
-ADD https://github.com/pgexperts/pg_plan_filter/archive/master.zip /tmp/pg_plan_filter.zip
-RUN unzip -j -d /tmp/pg_plan_filter /tmp/pg_plan_filter.zip
-
 WORKDIR /tmp/pg_plan_filter
+ADD pg_plan_filter/ .
 RUN make
 
 FROM $POSTGIS_IMG

@@ -1,3 +1,4 @@
 *
 !/plan_filter.control
 !/plan_filter--*.sql
+!/pg_plan_filter

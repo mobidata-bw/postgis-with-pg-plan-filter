@@ -5,3 +5,8 @@ updates:
     directory: '/'
     schedule:
       interval: weekly
+  # We vendor pg_plan_filter using a git submodule.
+  - package-ecosystem: gitsubmodule
+    directory: '/'
+    schedule:
+      interval: weekly
