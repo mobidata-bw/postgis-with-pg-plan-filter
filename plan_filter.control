@@ -1,0 +1,5 @@
+# plan_filter extension
+comment = 'filter statements by their execution plans.'
+default_version = '1.0'
+module_pathname = '$libdir/plan_filter'
+relocatable = false
