@@ -1,0 +1,7 @@
+version: 2
+updates:
+  # We want updates for our pinned base image.
+  - package-ecosystem: docker
+    directory: '/'
+    schedule:
+      interval: weekly
