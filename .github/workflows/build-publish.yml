@@ -34,6 +34,8 @@ jobs:
         tags: |
           ghcr.io/${{ github.repository }}:latest
           ghcr.io/${{ github.repository }}:${{ steps.docker-tags.outputs.permanent-tag }}
+        # todo: add linux/arm64 once postgis/postgis supports it
+        # see also https://github.com/postgis/docker-postgis/issues/216
         platforms: linux/amd64
         # https://docs.docker.com/build/ci/github-actions/cache/#cache-backend-api
         cache-from: type=gha
