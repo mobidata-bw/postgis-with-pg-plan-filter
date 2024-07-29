@@ -1,4 +1,4 @@
-ARG POSTGIS_IMG=postgis/postgis:16-3.4-alpine@sha256:19cf0e6b34752ac31c784cf664530b8f2577ad414494c643502b8686d1064015
+ARG POSTGIS_IMG=postgis/postgis:16-3.4-alpine@sha256:5cc92acec6cb62b56e55f5b74d065f29c1ebfc9a6e7edc8b443b9f9d17edab0d
 
 FROM $POSTGIS_IMG AS builder
 
