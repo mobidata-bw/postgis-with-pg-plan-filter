@@ -1,9 +1,9 @@
-ARG POSTGIS_IMG=postgis/postgis:16-3.4-alpine@sha256:681931a625df344215e9b8998bf34daf146b6a395ceacee4439eb9c85869239f
+ARG POSTGIS_IMG=postgis/postgis:16-3.5-alpine@sha256:62c9a947491a08631adb02c71ea9db22897ee9ab553616f72846a5b0f8b8dece
 
 FROM $POSTGIS_IMG AS builder
 
 RUN apk add --no-cache \
-	clang15 \
+	clang \
 	make \
 	musl-dev \
 	postgresql-dev \
