@@ -3,7 +3,8 @@ ARG POSTGIS_IMG=postgis/postgis:16-3.5-alpine@sha256:2804acad8204b6178f77b0c9034
 FROM $POSTGIS_IMG AS builder
 
 RUN apk add --no-cache \
-	clang \
+	# pg_plan_filter uses PostgreSQL's built-in extension Makefile, which seems to want a specific clang version. :/
+	clang19 \
 	make \
 	musl-dev \
 	postgresql-dev \
