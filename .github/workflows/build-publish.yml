@@ -3,7 +3,7 @@ name: build & publish Docker image
 on:
   push:
     branches:
-      - main
+      - '*'
 
 jobs:
   build-publish:
@@ -30,7 +30,7 @@ jobs:
     - name: build and push Docker image
       uses: docker/build-push-action@v6
       with:
-        push: true
+        push: ${{ github.ref == 'refs/heads/main' }}
         tags: |
           ghcr.io/${{ github.repository }}:latest
           ghcr.io/${{ github.repository }}:${{ steps.docker-tags.outputs.permanent-tag }}
