@@ -4,7 +4,8 @@ FROM $POSTGIS_IMG AS builder
 
 RUN apk add --no-cache \
 	# pg_plan_filter uses PostgreSQL's built-in extension Makefile, which seems to want a specific clang version. :/
-	clang19 \
+	clang21 \
+	gcc \
 	make \
 	musl-dev \
 	postgresql-dev \
